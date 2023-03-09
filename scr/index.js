@@ -30,3 +30,17 @@ function addAcademics(){
     aqObj.insertBefore(newNode,aqAddButtonObj);
 
 }
+
+//Generate CV
+
+ function generateCV(){
+    // console.log("generate CV");
+
+    // This will take value from input box of name
+    let nameField=document.getElementById('nameField').value;
+    //nameT1 is Location where to pull values of NameField!
+    let nameT1=document.getElementById('nameT1');
+
+    nameT1.innerText=nameField;
+
+ }

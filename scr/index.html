@@ -12,7 +12,10 @@
     <title>RG</title>
   </head>
   <body>
-    <div class="container">
+    
+     <!-- first part work -->
+
+    <div class="container" id="cv-form">
 
     <h1 class="text-center my-2 neonText">💖Resume Generator💖</h1>
     <p class="text-center">by webdev-ashishk</p>
@@ -67,6 +70,7 @@
           <textarea 
            placeholder="Write Your objective" 
            class="form-control"
+           id="objectField"
            rows="5"
            >
             </textarea>
@@ -77,6 +81,7 @@
          <label for="weField">Work Experience</label>
          <textarea 
          rows="3"
+         id="workexpField"
          placeholder="Write Your work-experience" 
          class="form-control weField"
          >
@@ -104,14 +109,94 @@
             </div>
        </div>
       </div>
-      <div class="container text-center mt-4">
-       <button class="btn btn-primary btn-lg">Generate CV</button>
-      </div>
-</div>
-
-
-
     </div>
+    <div class="container text-center mt-4">
+     <button onclick="generateCV()" class="btn btn-primary btn-lg">Generate CV</button>
+    </div>
+    </div>
+
+       <!-- ----------------------------  second part  -------------------------- -->
+        <!--cv template -->
+      
+       <div class="container text-center" id="cv-template">
+        <div class="row">
+
+          <div class="col-md-4 bg-info">
+            
+            <!-- first column -->
+            
+            <img src="https://www.pngitem.com/pimgs/m/35-350426_profile-icon-png-default-profile-picture-png-transparent.png" alt="default-profile"
+            class="img-fluid myImage"
+            />
+            
+            <div class="container">
+              <p id="nameT1">Default Name </p>
+              <p id="contactT">+91-7905102304 </p>
+              <p class="addressT">address sonbhadra near Muirpure sonbhadra!,India </p>
+              <hr>
+              
+              <p><a id="fbT" href="#1">www.facebook.com</a></p>
+              <p><a id="instaT" href="#1">www.instagram.com</a></p>
+              <p><a id="linkedT" href="#1">www.linkedin.com</a></p>
+            </div>
+          </div>
+          
+          <div class="col-md-8 py-5" style="border:2px solid red">
+            <!-- second column -->
+            <h2 id="nameT2" class="text-center" style="font-weight: 980">Ashish Kumar Gupta</h2>
+
+            <!-- object card -->
+            <div class="card mt-4">
+              <div class="card-header bg-info">
+               <h2 style="text-align: left;"> Objective</h2>
+              </div>
+              <div class="card-body" style="text-align:left">
+                <p id="objectiveT">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus eveniet corrupti doloribus eligendi ducimus quod qui unde tempore itaque delectus doloremque sequi, ipsa dolorem, est perferendis quis temporibus vero aliquid consectetur? Officiis nisi unde, ipsam sint ad assumenda at voluptatem.
+
+                </p>
+              </div>
+            </div>
+            
+            <!-- Work Experience -->
+            <div class="card mt-4">
+              <div class="card-header bg-info">
+               <h2 style="text-align: left;"> Work-Experience</h2>
+              </div>
+              <div class="card-body" style="text-align: left;">
+            <ul id="weT">
+              <li>doloremque sequi, ipsa dolorem, est perferendis quis temporibus vero</li>
+              <li>doloremque sequi, ipsa dolorem, est perferendis quis temporibus .</li>
+              <li>lorem10 doloremque sequi, ipsa dolorem, est .</li>
+              <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea, ipsa?</li>
+            </ul>
+              </div>
+            </div>
+            <!-- Academic Qualification-->
+            <div class="card mt-4">
+              <div class="card-header bg-info">
+               <h2 style="text-align: left;"> Academic Qualification</h2>
+              </div>
+              <div class="card-body" style="text-align: left;">
+            <ul id="aqT">
+              <li>doloremque sequi, ipsa dolorem, est perferendis quis temporibus vero</li>
+              <li>doloremque sequi, ipsa dolorem, est perferendis quis temporibus .</li>
+              <li>lorem10 doloremque sequi, ipsa dolorem, est .</li>
+              <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea, ipsa?</li>
+            </ul>
+              </div>
+            </div>
+            <div class="container mt-3 text-center">
+              <button onclick="printCV()" class="btn bg-info">Print CV</button>
+            </div>
+          </div>
+          
+          
+        </div>
+      </div>
+        
+
+
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
