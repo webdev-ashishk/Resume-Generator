@@ -1,9 +1,11 @@
 function addNewWeField() {
   // console.log("good!");
+  //new node for work experience 
   let newNode = document.createElement("textarea");
   newNode.classList.add("form-control");
   newNode.classList.add("weField");
   newNode.classList.add("mt-2");
+  newNode.setAttribute("id", "weId");
   newNode.setAttribute("rows", 3);
   newNode.setAttribute("placeholder", "write Your Experiences");
 
@@ -16,6 +18,8 @@ function addNewWeField() {
 
 function addAcademics() {
   // console.log("good!");
+  //newNode is for academics
+
   let newNode = document.createElement("textarea");
   newNode.classList.add("form-control");
   newNode.classList.add("aqField");
@@ -69,8 +73,24 @@ function generateCV() {
 let weField=document.getElementById('weField').value;
 document.getElementById('weT').innerHTML=weField;
 
+// work experience next added node
+
+let wes=document.getElementsByClassName('weField');
+let str="";
+for(let e of wes)
+{
+    str=str+`<li> ${e.value} </li>`;
+}
+document.getElementById('weT').innerHTML=str;
 
 
+//academics Qualification
 
+let aqs=document.getElementsByClassName("aqField");
 
+let str1="";
+for(let e of aqs){
+    str+=`<li>${e.value}</li>`
+}
+document.getElementById('aqT').innerHTML=str1;
 }
