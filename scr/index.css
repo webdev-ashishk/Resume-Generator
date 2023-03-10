@@ -4,6 +4,9 @@
 }
 
 
+#cv-template{
+  display:none;
+  }
 
 *{
     margin: 0;
